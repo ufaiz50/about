@@ -76,10 +76,30 @@ function darkMode(){
   let eMain = document.querySelector('.site-main');
   eMain.style.backgroundColor = '#333333'
   eMain.style.color = '#fff'
+  const navLinks = document.getElementsByClassName('nav-link');
+  [...navLinks].forEach(link => {
+    link.classList.remove('light');
+    link.classList.add('dark');
+  });
+  const bgLight = document.getElementsByClassName('bg-light');
+  [...bgLight].forEach(e => {
+    e.classList.remove('bg-light')
+    e.classList.add('bg-dark')
+  });
 }
 
 function lightMode(){
   let eMain = document.querySelector('.site-main');
   eMain.style.backgroundColor = '#fff'
-  eMain.style.color = 'black'
+  eMain.style.color = 'black';
+  const navLinks = document.getElementsByClassName('nav-link');
+  [...navLinks].forEach(link => {
+    link.classList.remove('dark');
+    link.classList.add('light');
+  });
+  const bgDark = document.getElementsByClassName('bg-dark');
+  [...bgDark].forEach(e => {
+    e.classList.remove('bg-dark')
+    e.classList.add('bg-light')
+  });
 }

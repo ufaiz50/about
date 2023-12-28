@@ -63,11 +63,25 @@
   padding: 1rem 20rem;
 }
 
-.header_area .main-menu .nav-item .nav-link {
+.header_area .main-menu .nav-item .nav-link.dark {
+  font: normal 500 15px/2px var(--roboto);
+  text-transform: uppercase;
+  padding: 1.7rem;
+  color: white;
+}
+
+.header_area .main-menu .nav-item .nav-link.light {
   font: normal 500 15px/2px var(--roboto);
   text-transform: uppercase;
   padding: 1.7rem;
   color: var(--title-color);
+}
+
+.dark-font-color{
+  color: white;
+}
+.light-font-color{
+  color: black;
 }
 
 .header_area .main-menu .navbar-nav .active a {
