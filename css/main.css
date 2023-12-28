@@ -2,10 +2,50 @@
 @import url(./font.css);
 
 /* css variable */
-@import url(./variables.css);
+@import url(./partials/variables.css);
 
 /* css global style */
-@import url(./global.css);
+@import url(./partials/global.css);
+
+
+/* stciky theme mode */
+.sticky-search {
+  width: 70px;
+  height: 70px;
+  background: #222e3b;
+  border-radius: 56px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: fixed;
+  right: 120px;
+  bottom: 50px;
+  transition: 0.3s ease-in-out;
+  transform: translateX(150%);
+  z-index: 9999;
+}
+.sticky-search:hover {
+  background: #19212b;
+}
+.sticky-search:hover .sticky-theme__icon {
+  transform: scale(1.05);
+}
+
+.sticky-theme__icon {
+  width: 40px;
+  height: 40px;
+  transition: 0.2s ease-in-out;
+  background: url(../img/theme/dark-mode.svg) center/cover;
+}
+
+.sticky-search--open .sticky-theme__icon {
+  margin-right: 10px;
+  position: relative;
+  left: -15px;
+}
+
 
 /* start navigation */
 .header_area .main-menu .navbar .navbar-brand {
