@@ -52,3 +52,34 @@ $(document).ready(function () {
 
   navbarFixed();
 });
+
+document.getElementById('theme_change').addEventListener('click', function() {
+  const themeIcon = document.querySelector('.sticky-theme__icon');
+  
+  // Check if dark-mode class is present
+  if (themeIcon.classList.contains('dark-mode')) {
+    // Remove dark-mode and add light-mode
+    themeIcon.classList.remove('dark-mode');
+    themeIcon.classList.add('light-mode');
+    this.style.backgroundColor = '#f5f5f5';
+    darkMode();
+  } else {
+    // Remove light-mode and add dark-mode
+    themeIcon.classList.remove('light-mode');
+    themeIcon.classList.add('dark-mode');
+    this.style.backgroundColor = '#222e3b';
+    lightMode()
+  }
+});
+
+function darkMode(){
+  let eMain = document.querySelector('.site-main');
+  eMain.style.backgroundColor = '#333333'
+  eMain.style.color = '#fff'
+}
+
+function lightMode(){
+  let eMain = document.querySelector('.site-main');
+  eMain.style.backgroundColor = '#fff'
+  eMain.style.color = 'black'
+}

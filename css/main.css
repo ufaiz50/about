@@ -9,7 +9,7 @@
 
 
 /* stciky theme mode */
-.sticky-search {
+.sticky-theme {
   width: 70px;
   height: 70px;
   background: #222e3b;
@@ -26,14 +26,21 @@
   transform: translateX(150%);
   z-index: 9999;
 }
-.sticky-search:hover {
+.sticky-theme:hover {
   background: #19212b;
 }
-.sticky-search:hover .sticky-theme__icon {
+.sticky-theme:hover .sticky-theme__icon {
   transform: scale(1.05);
 }
 
-.sticky-theme__icon {
+.light-mode {
+  width: 40px;
+  height: 40px;
+  transition: 0.2s ease-in-out;
+  background: url(../img/theme/light-mode.svg) center/cover;
+}
+
+.dark-mode {
   width: 40px;
   height: 40px;
   transition: 0.2s ease-in-out;
